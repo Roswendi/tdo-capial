@@ -8,9 +8,9 @@ import React, { useMemo, useState } from "react";
 //    Or swap to HubSpot — see onSubmit() for an example payload.
 // 3) COMPLIANCE: Update disclosures to match your jurisdiction and licenses.
 
-const CONTACT_EMAIL = "advisors@tdocapital.com"; // TODO: set your real email
-const CONTACT_PHONE_ID = "+62-XXX-XXXX-XXX";      // TODO: set your Indonesian number
-const CONTACT_PHONE_US = "+1-XXX-XXX-XXXX";       // TODO: set your US number
+const CONTACT_EMAIL = "endi@tdo-capital.com"; // official email
+const CONTACT_PHONE_ID = "+62 8119012888";      // Indonesian phone number
+const CONTACT_PHONE_US = "+1 3018149421";       // US number (empty for now)
 const FORMSPREE_FORM_ID = "YOUR_FORMSPREE_ID";     // TODO: set your Formspree form id
 
 export default function TDOCapitalSite() {
