@@ -8,10 +8,10 @@
     "build": "echo 'No build step needed - using CDN React'",
     "deploy": "gh-pages -d ."
   },
-  "homepage": "https://USERNAME.github.io/tdo-capial",
+  "homepage": "https://roswendi.github.io/tdo-capial",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USERNAME/tdo-capial.git"
+    "url": "git+https://github.com/roswendi/tdo-capial.git"
   },
   "keywords": ["finance", "investment", "portfolio-management", "wealth-management"],
   "author": "TDO Capital",
