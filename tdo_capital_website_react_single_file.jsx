@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+// Using React from global CDN instead of ES6 import
+const { useState, useMemo } = React;
 
 // TDO Capital — React landing page with EN/ID localization + Formspree wiring
 // Tailwind CSS utility classes are used for styling.
@@ -13,7 +14,7 @@ const CONTACT_PHONE_ID = "+62 8119012888";      // Indonesian phone number
 const CONTACT_PHONE_US = "+1 3018149421";       // US number (empty for now)
 const FORMSPREE_FORM_ID = "YOUR_FORMSPREE_ID";     // TODO: set your Formspree form id
 
-export default function TDOCapitalSite() {
+function TDOCapitalSite() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [lang, setLang] = useState("en");
 
