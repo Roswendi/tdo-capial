@@ -320,7 +320,7 @@ function TDOCapitalSite() {
   );
 }
 
-function LangToggle({ lang, setLang }: { lang: string; setLang: (s: string) => void }) {
+function LangToggle({ lang, setLang }) {
   return (
     <div className="flex items-center gap-1 text-xs">
       <button onClick={() => setLang("en")} className={`px-2 py-1 rounded-lg border ${lang === "en" ? "border-slate-900 text-slate-900" : "border-slate-300 text-slate-600"}`}>EN</button>
@@ -329,12 +329,12 @@ function LangToggle({ lang, setLang }: { lang: string; setLang: (s: string) => v
   );
 }
 
-function ContactForm({ lang, t }: { lang: string; t: any }) {
+function ContactForm({ lang, t }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -361,7 +361,7 @@ function ContactForm({ lang, t }: { lang: string; t: any }) {
       // https://api.hsforms.com/submissions/v3/integration/submit/:portalId/:formId
       // const payload = { fields: [{ name: "email", value: data.get("email") }, ...] };
       // await fetch(HS_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
-    } catch (err: any) {
+    } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
@@ -396,7 +396,7 @@ function ContactForm({ lang, t }: { lang: string; t: any }) {
         <div className="sm:col-span-1">
           <label className="block text-sm text-slate-700">{t.form.interest}</label>
           <select name="interest" className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300">
-            {t.form.interestOpts.map((o: string) => (
+            {t.form.interestOpts.map((o) => (
               <option key={o}>{o}</option>
             ))}
           </select>
