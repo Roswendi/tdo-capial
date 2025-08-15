@@ -15,8 +15,20 @@
   
   <script type="text/babel" src="tdo_capital_website_react_single_file.js"></script>
   <script type="text/babel">
+    // Test if React and Babel are working
+    console.log('React:', typeof React);
+    console.log('ReactDOM:', typeof ReactDOM);
+    console.log('TDOCapitalSite:', typeof TDOCapitalSite);
+    
     const { createElement } = React;
-    ReactDOM.render(createElement(TDOCapitalSite), document.getElementById('root'));
+    const { createRoot } = ReactDOM;
+    
+    if (typeof TDOCapitalSite === 'undefined') {
+      document.getElementById('root').innerHTML = '<h1 style="color: red;">TDOCapitalSite component not found!</h1>';
+    } else {
+      const root = createRoot(document.getElementById('root'));
+      root.render(createElement(TDOCapitalSite));
+    }
   </script>
 </body>
 </html>
